@@ -19,16 +19,15 @@ const App = ()=>{
   return (
     <Provider store={store}>
       	<PersistGate loading={null} persistor={persistor}>
-    		<ErrorBoundary render={() => <ErrorView />}>
-   				<Router >
-        			<Routes />
+    			<ErrorBoundary render={() => <ErrorView />}>
+   					<Router >
+        		<	Routes />
         		</Router>
-    		</ErrorBoundary>
+    			</ErrorBoundary>
       	</PersistGate>
     </Provider>
   );
 }
-
 
 App.propTypes = {
   history: object.isRequired,
