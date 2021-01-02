@@ -5,25 +5,25 @@ import Home from "./Home";
 import Layout from "../components/Layout";
 
 const Routes: React.FC = () => {
-    const renderedRoutes = (() => {
+  const renderedRoutes = (() => {
      
-      return (
-        <>
-          <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-          </Switch>
-        </>
-      );
-    })();
-  
     return (
-        <Layout>
-          {renderedRoutes}
-        </Layout>
+      <>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+        </Switch>
+      </>
     );
-  };
+  })();
+  
+  return (
+    <Layout>
+      {renderedRoutes}
+    </Layout>
+  );
+};
  
   
 const RootRoutes = () => <Route component={Routes} />;

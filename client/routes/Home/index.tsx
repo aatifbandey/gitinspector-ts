@@ -10,14 +10,14 @@ import { RootState } from "../../reducers";
 
 const Home: React.FC = (props) => {
 	
-	useInjectSaga({ key: 'homeSaga', saga: homeSaga });
-	const dispatch = useDispatch();
+  useInjectSaga({ key: 'homeSaga', saga: homeSaga });
+  const dispatch = useDispatch();
 	
-	const reducerState = useSelector((state: RootState)=> state.homeReducer);
+  const reducerState = useSelector((state: RootState)=> state.homeReducer);
 	
-	return  (
-		reducerState ? <View {...props} state={reducerState}  dispatch={dispatch} /> : <div></div>
-	);
+  return  (
+    reducerState ? <View {...props} state={reducerState}  dispatch={dispatch} /> : <div></div>
+  );
   
 }
 

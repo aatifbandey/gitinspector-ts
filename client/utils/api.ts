@@ -14,17 +14,17 @@ export const generateResourceMethod = (resourceApi:any, method: string) => {
     const apiCall = resourceApi[method](path, data, config);
 
     return apiCall.then((responseWrapper:any) => {
-        const { data } = responseWrapper;
-        console.log(data);
+      const { data } = responseWrapper;
+      console.log(data);
         
-        return data;
-      },
-      (error:any) => {
-        console.log('fail');
+      return data;
+    },
+    (error:any) => {
+      console.log('fail');
 
-        console.log(error);
-        throw { data: 'API failed' };
-      },
+      console.log(error);
+      throw { data: 'API failed' };
+    },
     );
   };
 }

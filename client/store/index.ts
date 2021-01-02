@@ -18,14 +18,11 @@ export const configureStore = (initialState = {}, history:any={}) => {
   let composeEnhancers = compose;
  
   const reduxSagaMonitorOptions = {};
-    /* eslint-disable */
-  // If Redux Dev Tools and Saga Dev Tools Extensions are installed, enable them
-  /* istanbul ignore next */
+  /* eslint-disable */
+    // If Redux Dev Tools and Saga Dev Tools Extensions are installed, enable them
+  
   if (process.env.NODE_ENV !== 'production' && typeof window === 'object') {
-    /* eslint-disable no-underscore-dangle */
-    
     if (window &&  (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) composeEnhancers =  (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({});
-
     /* eslint-enable */
   }
 
