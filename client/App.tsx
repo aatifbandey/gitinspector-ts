@@ -29,6 +29,7 @@ const App = ()=>{
   );
 }
 
+
 App.propTypes = {
   history: object.isRequired,
 };
